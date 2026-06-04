@@ -5,7 +5,7 @@
 ![openFrameworks](https://img.shields.io/badge/openFrameworks-0.12.1-ff69b4.svg)
 ![Arduino](https://img.shields.io/badge/Arduino-Uno%20%C3%972-00979D.svg)
 
-![Active welding — bright pool, sparks, and the cyan guidance arrow](media/welding-active.jpg)
+![A full training run — trace the seam, hold the speed, read the bead](media/trainer-run.gif)
 
 A **haptic welding trainer** built on a 5-bar pantograph. You hold the handle like a
 torch and trace a weld seam in a 2-D plane; two Arduino-driven motors push back with
