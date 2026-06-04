@@ -1,0 +1,23 @@
+{
+  // Coordinates are in the reported end-effector-tip frame: centerline
+  // tip = (0,0), workspace x in [-249,249], y in [-229,4]. See of-app/src/Config.h.
+  // A straight descent that curves smoothly into a quarter arc. The line ends at
+  // (6,-114) moving DOWN; the arc (center (34,-114), r28) starts there (angle pi)
+  // and sweeps CCW to angle 3pi/2 = point (34,-142). Sweeping toward 3pi/2 makes
+  // the arc LEAVE the joint moving down too — G1 (tangent) continuous, not a cusp.
+  // (An earlier draft swept to pi/2, which left the joint moving UP: a 180-degree
+  // reversal that fought the trainee right where the line should flow into the arc.)
+  // Geometry is the original full-size path scaled by 0.7 about its bounding-box
+  // center (20,-100) — uniform scaling preserves the G1 continuity above.
+  "name": "Line into arc",
+  "primitives": [
+    { "type": "linear", "p0": [6.0, -58.0], "p1": [6.0, -114.0] },
+    {
+      "type": "arc",
+      "center":    [34.0, -114.0],
+      "radius":    28.0,
+      "start_rad": 3.14159265358979,
+      "end_rad":   4.71238898038469
+    }
+  ]
+}

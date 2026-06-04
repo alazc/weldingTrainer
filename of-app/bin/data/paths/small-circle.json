@@ -1,0 +1,27 @@
+{
+  // Coordinates are in the reported end-effector-tip frame: centerline
+  // tip = (0,0), workspace x in [-249,249], y in [-229,4]. See of-app/src/Config.h.
+  // Small circle (center (0,-110), r25) — a touch smaller than the "Line into arc"
+  // shape's r28 arc. Built as TWO pi-arcs (the loader rejects |sweep| > pi). It
+  // deliberately STARTS at the top of the circle (angle pi/2 = point (0,-85)): the
+  // tare/init point is seeded from the path's first vertex (ofApp setActivePath),
+  // so starting at the top puts the home point at top-center. First arc sweeps
+  // pi/2 -> 3pi/2 (top->left->bottom); second 3pi/2 -> 5pi/2 closes back to the top.
+  "name": "Small circle",
+  "primitives": [
+    {
+      "type": "arc",
+      "center":    [0.0, -110.0],
+      "radius":    25.0,
+      "start_rad": 1.5707963267949,
+      "end_rad":   4.71238898038469
+    },
+    {
+      "type": "arc",
+      "center":    [0.0, -110.0],
+      "radius":    25.0,
+      "start_rad": 4.71238898038469,
+      "end_rad":   7.85398163397448
+    }
+  ]
+}

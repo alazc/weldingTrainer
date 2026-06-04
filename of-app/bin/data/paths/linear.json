@@ -1,0 +1,8 @@
+{
+  // Coordinates are in the reported end-effector-tip frame: centerline
+  // tip = (0,0), workspace reaches down to ry ~ -207. See of-app/src/Config.h.
+  "name": "Straight line, vertical down center",
+  "primitives": [
+    { "type": "linear", "p0": [0.0, -40.0], "p1": [0.0, -160.0] }
+  ]
+}

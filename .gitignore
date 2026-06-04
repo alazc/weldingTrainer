@@ -1,0 +1,34 @@
+# Build artifacts
+*.obj
+*.o
+*.exe
+*.pdb
+*.ilk
+*.exp
+*.lib
+of-app/obj/
+of-app/build/
+of-app/bin/*.dll
+dist/
+
+# Arduino build caches (arduino-cli --build-path output)
+arduino/.build_*/
+*.hex
+*.elf
+
+# Runtime / QA output (not the tracked assets under of-app/bin/data/)
+of-app/bin/*.csv
+of-app/bin/*.png
+of-app/bin/*_out.txt
+of-app/bin/*_err.txt
+/session.csv
+/*.png
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+*~
+Thumbs.db
+.DS_Store
+desktop.ini
